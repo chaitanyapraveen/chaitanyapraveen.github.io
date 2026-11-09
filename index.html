@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chaitanya Praveen</title>
+<meta name="description" content="Chaitanya Praveen, Staff Engineer at Cohere Health. Work in ocean engineering, data, finance, commerce and healthcare AI.">
+<meta property="og:title" content="Chaitanya Praveen">
+<meta property="og:description" content="A multi-domain generalist with a specialisation in technology.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23b4532a'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23fff' text-anchor='middle'%3ENC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf8f4;
+    --surface: #ffffff;
+    --ink: #1c1a17;
+    --muted: #6b655c;
+    --line: #e6e1d8;
+    --accent: #b4532a;
+    --accent-soft: #f4e6dd;
+    --node: #f3efe7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141311;
+      --surface: #1c1b18;
+      --ink: #ece7de;
+      --muted: #a39c90;
+      --line: #2e2c28;
+      --accent: #e08a5f;
+      --accent-soft: #33241c;
+      --node: #23211d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141311;
+    --surface: #1c1b18;
+    --ink: #ece7de;
+    --muted: #a39c90;
+    --line: #2e2c28;
+    --accent: #e08a5f;
+    --accent-soft: #33241c;
+    --node: #23211d;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 17px/1.65 Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: var(--accent); }
+  img { max-width: 100%; display: block; }
+
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+  @media (min-width: 640px) { .wrap { padding: 0 32px; } }
+
+  h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 500; letter-spacing: -0.01em; line-height: 1.15; margin: 0; }
+  .eyebrow {
+    font: 500 12px/1 "JetBrains Mono", ui-monospace, monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .muted { color: var(--muted); }
+
+  /* Top bar */
+  .top { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; font-size: 14px; }
+  .top nav { display: flex; gap: 20px; }
+  .top a { text-decoration: none; color: var(--muted); }
+  .top a:hover { color: var(--accent); }
+  .theme-btn {
+    background: none; border: 1px solid var(--line); color: var(--muted);
+    border-radius: 999px; padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer;
+  }
+
+  /* Hero */
+  .hero { padding: 64px 0 48px; }
+  .hero h1 { font-size: clamp(38px, 6.5vw, 64px); margin: 0 0 16px; }
+  .hero .lede { font-family: Fraunces, Georgia, serif; font-size: clamp(20px, 2.6vw, 26px); line-height: 1.4; max-width: 34ch; margin: 0 0 20px; }
+  .hero .lede em { color: var(--accent); font-style: italic; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px 24px; font: 500 14px/1.4 "JetBrains Mono", monospace; color: var(--muted); padding: 0; margin: 0; list-style: none; }
+  .facts li + li::before { content: "·"; color: var(--accent); margin-right: 24px; }
+  .facts { gap: 8px 24px; }
+  .hero .intro { max-width: 60ch; color: var(--muted); margin: 0 0 28px; }
+  .list { margin: 0 0 12px; padding-left: 18px; }
+  .list li { margin-bottom: 6px; }
+
+  /* Spectrum */
+  .spectrum { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; margin-bottom: 24px; }
+  .spectrum ol { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  @media (min-width: 720px) { .spectrum ol { grid-template-columns: repeat(6, 1fr); } }
+  .spectrum li a { display: block; height: 100%; background: var(--surface); padding: 14px 14px 16px; text-decoration: none; transition: background .15s; }
+  .spectrum li a:hover { background: var(--accent-soft); color: var(--ink); }
+  .spectrum .yr { font: 500 12px "JetBrains Mono", monospace; color: var(--muted); }
+  .spectrum .dom { display: block; font-family: Fraunces, Georgia, serif; font-size: 18px; margin: 4px 0 2px; }
+  .spectrum .org { font-size: 13px; color: var(--muted); }
+
+  /* Case studies */
+  .case { padding: 72px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 16px; }
+  .case-head { margin-bottom: 32px; }
+  .case-head h2 { font-size: clamp(30px, 4.5vw, 42px); margin: 10px 0 6px; }
+  .case-head .role { color: var(--muted); font-size: 15px; }
+  .block { display: grid; gap: 6px 32px; margin: 0 0 28px; }
+  @media (min-width: 720px) { .block { grid-template-columns: 160px 1fr; } }
+  .block > .label { font: 500 12px/2 "JetBrains Mono", monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .block p { margin: 0 0 12px; }
+  .block p:last-child { margin-bottom: 0; }
+  .sub { font-family: Fraunces, Georgia, serif; font-size: 22px; margin: 40px 0 16px; }
+  .sub:first-of-type { margin-top: 0; }
+
+  .proof { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .proof li { background: var(--accent-soft); color: var(--ink); border-radius: 999px; padding: 4px 12px; font-size: 14px; }
+  .proof li strong { font-weight: 600; }
+  .proof a { text-decoration: none; }
+  .stack { font: 400 14px/1.8 "JetBrains Mono", monospace; color: var(--muted); }
+
+  /* Flow diagrams */
+  .flow { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin: 8px 0 28px; }
+  .flow-title { font: 500 12px "JetBrains Mono", monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+  .flow-row { display: flex; flex-direction: column; align-items: stretch; gap: 8px; }
+  @media (min-width: 720px) { .flow-row { flex-direction: row; align-items: center; } }
+  .stage { flex: 1; background: var(--node); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; font-size: 14px; line-height: 1.4; }
+  .stage b { display: block; font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+  .stage span { color: var(--muted); font-size: 13px; }
+  .stage.hl { border-color: var(--accent); background: var(--accent-soft); }
+  .arrow { color: var(--accent); text-align: center; font-size: 18px; line-height: 1; flex: none; }
+  .arrow::before { content: "↓"; }
+  @media (min-width: 720px) { .arrow::before { content: "→"; } }
+  .flow-down { color: var(--accent); text-align: center; font-size: 18px; margin: 8px 0; }
+
+  /* Media */
+  .figure { margin: 8px 0 28px; }
+  .figure figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .figure img { border-radius: 10px; border: 1px solid var(--line); width: 100%; }
+  .phones { display: grid; grid-template-columns: repeat(2, minmax(0, 200px)); gap: 16px; }
+  .phones img { aspect-ratio: 9 / 16; object-fit: cover; object-position: center 30%; border-radius: 14px; }
+  .ads { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  @media (min-width: 720px) { .ads { grid-template-columns: repeat(5, 1fr); align-items: start; } }
+  .ads img { border-radius: 8px; border: 1px solid var(--line); width: 100%; }
+
+  /* Also + toolbox */
+  .section { padding: 72px 0; border-bottom: 1px solid var(--line); }
+  .section h2 { font-size: 32px; margin: 10px 0 28px; }
+  .also { display: grid; gap: 24px; }
+  @media (min-width: 720px) { .also { grid-template-columns: 1fr 1fr; } }
+  .also h3 { font-size: 20px; margin-bottom: 4px; }
+  .also .role { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+  .also p { margin: 0; }
+  .tools { display: grid; gap: 18px; margin: 0; }
+  @media (min-width: 720px) { .tools { grid-template-columns: 160px 1fr; gap: 14px 32px; } }
+  .tools dt { font: 500 12px/2 "JetBrains Mono", monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .tools dd { margin: 0; }
+
+  /* Contact */
+  .contact { padding: 80px 0 64px; }
+  .contact h2 { font-size: clamp(32px, 5vw, 48px); margin: 10px 0 20px; max-width: 18ch; }
+  .contact .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .btn { display: inline-block; padding: 10px 18px; border-radius: 999px; border: 1px solid var(--ink); text-decoration: none; font-size: 15px; font-weight: 500; }
+  .btn.primary { background: var(--ink); color: var(--bg); }
+  .btn.primary:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn:hover { border-color: var(--accent); }
+  footer { padding: 24px 0 40px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <a href="#" style="color:var(--ink);font-weight:600">Chaitanya Praveen</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-btn" id="theme" type="button" aria-label="Toggle colour theme">Theme</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hi, I'm Chaitanya Praveen.</h1>
+    <p class="lede">A multi-domain generalist with a specialisation in technology.</p>
+    <p class="intro">I studied Aerospace Engineering at IIT Madras. In the 16 years since, I've built ocean structures, data pipelines, accounting software, an online clothing brand and, now, healthcare AI. I'm currently a Staff Engineer at Cohere Health.</p>
+    <ul class="facts">
+      <li>Staff Engineer, Cohere Health</li>
+      <li>IIT Madras</li>
+      <li>16 years</li>
+      <li>1 US patent</li>
+    </ul>
+  </section>
+
+  <section class="spectrum" id="work">
+    <div class="eyebrow">Where I've worked</div>
+    <ol>
+      <li><a href="#sea6"><span class="yr">2012</span><span class="dom">Ocean</span><span class="org">Sea6 Energy</span></a></li>
+      <li><a href="#other"><span class="yr">2019</span><span class="dom">Creative</span><span class="org">Gravity</span></a></li>
+      <li><a href="#other"><span class="yr">2020</span><span class="dom">Data</span><span class="org">RudderStack</span></a></li>
+      <li><a href="#numerize"><span class="yr">2020</span><span class="dom">Finance</span><span class="org">Numerize</span></a></li>
+      <li><a href="#basicallydesi"><span class="yr">2020</span><span class="dom">Commerce</span><span class="org">BasicallyDesi</span></a></li>
+      <li><a href="#cohere"><span class="yr">2026</span><span class="dom">Health AI</span><span class="org">Cohere Health</span></a></li>
+    </ol>
+  </section>
+
+  <!-- ============ COHERE HEALTH ============ -->
+  <article class="case" id="cohere">
+    <div class="case-head">
+      <div class="eyebrow">Healthcare AI · 2026 to now</div>
+      <h2>Cohere Health</h2>
+      <div class="role">Staff Engineer</div>
+    </div>
+
+    <h3 class="sub">Prior authorization platform</h3>
+    <div class="block">
+      <div class="label">The problem</div>
+      <div><p>Prior authorization means checking every request against clinical policies, and many of those policies overlap or depend on each other. Doing it by hand is slow.</p></div>
+    </div>
+    <div class="block">
+      <div class="label">What I did</div>
+      <div>
+        <p>First I spent time understanding the market, how Cohere sells, what new technology was coming and where Cohere had gaps. Then I designed and proposed a new prior authorization platform, where agents help reviewers make faster and more accurate decisions.</p>
+        <p>The design covered data pipelines, semantic and data models, clinical policy and inter-policy models, and medical ontologies like SNOMED, with LLMs on top. It was adopted at director level, and three product teams now build on it.</p>
+      </div>
+    </div>
+
+    <div class="flow" aria-label="Prior authorization platform layers">
+      <div class="flow-title">Platform layers</div>
+      <div class="flow-row">
+        <div class="stage"><b>Data pipelines</b><span>Clinical and claims data</span></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="stage"><b>Semantic and data models</b><span>Medical ontology, SNOMED</span></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="stage"><b>Policy models</b><span>Clinical and inter-policy</span></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="stage hl"><b>Agent-assisted decision</b><span>LLMs working over the policies</span></div>
+      </div>
+    </div>
+
+    <h3 class="sub">Breaking up a monolith with agents</h3>
+    <div class="block">
+      <div class="label">What I'm building</div>
+      <div><p>I'm building an agentic platform that helps break a large monolith into services safely, so the new services keep behaving like the old system. It's in progress, so I'll keep the details to a conversation.</p></div>
+    </div>
+
+    <div class="block">
+      <div class="label">Tech</div>
+      <div class="stack">LLMs · agentic workflows · SNOMED · semantic modeling</div>
+    </div>
+  </article>
+
+  <!-- ============ BASICALLYDESI ============ -->
+  <article class="case" id="basicallydesi">
+    <div class="case-head">
+      <div class="eyebrow">Commerce · 2020 to 2025</div>
+      <h2>BasicallyDesi</h2>
+      <div class="role">Co-Founder, CTO and COO</div>
+    </div>
+
+    <div class="block">
+      <div class="label">The problem</div>
+      <div><p>Saree blouses are usually stitched by a tailor. Buying one online means guessing your size and picking from a very large catalogue.</p></div>
+    </div>
+    <div class="block">
+      <div class="label">What I did</div>
+      <div>
+        <p>I co-founded the company and ran technology and operations. I built:</p>
+        <ul class="list">
+          <li><strong>Fit engine.</strong> You enter three measurements and it recommends a size, with a confidence score.</li>
+          <li><strong>Blouse designer.</strong> An agentic designer where customers create their own blouse and see it before they order.</li>
+          <li><strong>Text-to-SKU search.</strong> Customers describe what they want, like "maroon brocade, boat neck, for a wedding", and AI workflows find the matching products.</li>
+          <li><strong>Marketing.</strong> I managed marketing myself, designed and tested the campaigns, and built the services behind marketing and after-sale operations.</li>
+          <li><strong>Analytics.</strong> A data stack on Airbyte, BigQuery, dbt, Dagster and Cube.js.</li>
+        </ul>
+        <p>Over three years I spoke to more than 200,000 customers myself. Most of what we built came out of those conversations.</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="label">Ad pipeline</div>
+      <div><p>I also built the pipeline that makes our ads. It takes a product from the catalogue, generates the images, checks them against our brand rules and produces the right sizes for Instagram and Google ads. Every ad below came out of it.</p></div>
+    </div>
+    <div class="ads">
+      <img src="img/ad-pmax-forestgreen-teardrop-1080x1350.jpg" alt="Ad: woman in a green blouse with a saree, 'A blouse for the saree you already own'" loading="lazy">
+      <img src="img/ad-denim-blue-sweetheart-column-9x16.jpg" alt="Story ad: 'Who said denim can't drape?'" loading="lazy">
+      <img src="img/ad-pmax-deepyellow-butta-1080x1350.jpg" alt="Google ad, deep yellow butta blouse" loading="lazy">
+      <img src="img/ad-black-india-9x16.jpg" alt="Story ad, black blouse" loading="lazy">
+      <img src="img/ad-denim-navy-tieback-scatter-1x1.jpg" alt="Square ad, navy denim tie-back blouse" loading="lazy">
+    </div>
+
+    <div class="block" style="margin-top:32px">
+      <div class="label">Proof</div>
+      <ul class="proof">
+        <li><strong>30,000+</strong> products</li>
+        <li><strong>200,000+</strong> customers spoken to</li>
+        <li><a href="https://www.instagram.com/basically.desi/" rel="noopener" target="_blank"><strong>307K</strong> Instagram followers ↗</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.basicallydesi.app" rel="noopener" target="_blank">Android app ↗</a></li>
+        <li><a href="https://basicallydesi.com" rel="noopener" target="_blank">basicallydesi.com ↗</a></li>
+      </ul>
+    </div>
+    <div class="block">
+      <div class="label">Tech</div>
+      <div class="stack">Nuxt 3 · Fastify · multi-agent orchestration (Text-to-DAG) · Python · FastAPI · Temporal · ComfyUI · Postgres · BigQuery · dbt · Dagster · DigitalOcean</div>
+    </div>
+  </article>
+
+  <!-- ============ NUMERIZE ============ -->
+  <article class="case" id="numerize">
+    <div class="case-head">
+      <div class="eyebrow">Finance · 2020 to 2025</div>
+      <h2>Numerize</h2>
+      <div class="role">Co-Founder and CTO · earlier called Firstcourse Accounting</div>
+    </div>
+
+    <div class="block">
+      <div class="label">The problem</div>
+      <div><p>Most restaurants have their numbers spread across POS systems, bank accounts and paper invoices, and can't afford an accountant to pull it together.</p></div>
+    </div>
+    <div class="block">
+      <div class="label">What I did</div>
+      <div>
+        <p>We built the financial base for a restaurant's books. All the data goes into one reconciled ledger, and the reports are calculated from it: net payables and receivables, net profit, month-on-month growth, runway and price sensitivity.</p>
+        <p>Invoices are read by a multistage OCR pipeline, and a person checks the numbers before they go in. Cash entries are reconciled against the Chart of Accounts. A graph database tracks how transactions and financial entities are connected. I led a team of four engineers and mentored them on quality and testing.</p>
+      </div>
+    </div>
+
+    <div class="flow" aria-label="Numerize architecture">
+      <div class="flow-title">Architecture</div>
+      <div class="flow-row">
+        <div class="stage"><b>Inputs</b><span>POS, bank feeds, invoices, cash entries</span></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="stage"><b>Extraction</b><span>Multistage OCR with a person checking</span></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="stage"><b>Ledger</b><span>Reconciled against Chart of Accounts. Postgres and GraphDB</span></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="stage hl"><b>Reports</b><span>P&amp;L, runway, sensitivity and more</span></div>
+      </div>
+    </div>
+
+    <figure class="figure">
+      <div class="phones">
+        <img src="img/numerize-pnl.jpg" alt="Numerize mobile app: P&amp;L view" loading="lazy">
+        <img src="img/numerize-sensitivity-analysis.jpg" alt="Numerize mobile app: sensitivity analysis" loading="lazy">
+      </div>
+      <figcaption>P&amp;L and sensitivity analysis in the mobile app.</figcaption>
+    </figure>
+
+    <div class="block">
+      <div class="label">Tech</div>
+      <div class="stack">Vue.js · Postgres · GraphDB · Celery · Azure</div>
+    </div>
+  </article>
+
+  <!-- ============ SEA6 ============ -->
+  <article class="case" id="sea6">
+    <div class="case-head">
+      <div class="eyebrow">Ocean engineering · 2012 to 2019</div>
+      <h2>Sea6 Energy</h2>
+      <div class="role">Ocean Engineer, then Principal Engineer, Ocean Structures</div>
+    </div>
+
+    <div class="block">
+      <div class="label">The problem</div>
+      <div><p>Growing seaweed in the open sea needs floating structures that can take the waves without using too much material or too many anchors.</p></div>
+    </div>
+    <div class="block">
+      <div class="label">What I did</div>
+      <div>
+        <p>I joined as an ocean engineer, writing programs to simulate how floating structures and their moorings behave. Then I wrote a scientific program to estimate the loads on a structure across different wave conditions.</p>
+        <p>That work led me to design Dweep, a modular floating structure based on tensegrity, an idea I took from biological structures. The load is shared across the whole frame, so it needs less material and fewer anchors. I'm the first-named inventor on the US patent.</p>
+      </div>
+    </div>
+
+    <figure class="figure">
+      <img src="img/dweep.jpg" alt="Dweep floating structure at sea, a red and grey frame with mooring buoys" loading="lazy">
+      <figcaption>Dweep at sea. Photo: innovationsoftheworld.com</figcaption>
+    </figure>
+
+    <div class="block">
+      <div class="label">Proof</div>
+      <ul class="proof">
+        <li><a href="https://patents.google.com/patent/US10556646B2/en" rel="noopener" target="_blank"><strong>US Patent 10,556,646 B2</strong> ↗</a></li>
+      </ul>
+    </div>
+    <div class="block">
+      <div class="label">Tech</div>
+      <div class="stack">Python · C++ · structural and mooring simulation</div>
+    </div>
+  </article>
+
+  <!-- ============ OTHER WORK ============ -->
+  <section class="section" id="other">
+    <h2>Other work</h2>
+    <div class="also">
+      <div>
+        <h3>RudderStack</h3>
+        <div class="role">SDE 3</div>
+        <p>Built data pipelines that sync data to different warehouses without duplicates or data loss. Also worked on the Google product integrations and on reverse ETL.</p>
+      </div>
+      <div>
+        <h3>Gravity Consulting</h3>
+        <div class="role">Senior Creative Technologist · 2019 to 2020</div>
+        <p>Worked across product, design and engineering on digital and interactive projects for clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOOLS ============ -->
+  <section class="section">
+    <h2>Tools I use</h2>
+    <dl class="tools">
+      <dt>AI</dt><dd>LLMs, RAG, agentic workflows, multi-agent orchestration, clinical inference, image generation</dd>
+      <dt>Data</dt><dd>BigQuery, dbt, Dagster, Airbyte, ETL and reverse ETL, Qdrant, Redis</dd>
+      <dt>Backend</dt><dd>Python, TypeScript, Go, FastAPI, Fastify, Django, Postgres, GraphDB, Temporal</dd>
+      <dt>Frontend</dt><dd>Nuxt 3, Vue.js</dd>
+      <dt>Cloud</dt><dd>Azure, AWS, GCP, DigitalOcean</dd>
+      <dt>Engineering</dt><dd>Python and C++ simulation, structural and load analysis</dd>
+    </dl>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <h2>Get in touch</h2>
+    <p class="muted">I'm based in India. LinkedIn is the best way to reach me.</p>
+    <div class="links">
+      <a class="btn primary" href="https://www.linkedin.com/in/chaitanyapraveen-nandigama" rel="noopener" target="_blank">Message me on LinkedIn ↗</a>
+    </div>
+  </section>
+
+  <footer>N. Chaitanya Praveen · Dual Degree, Aerospace Engineering, IIT Madras, 2005 to 2010</footer>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById("theme");
+    try {
+      var saved = localStorage.getItem("theme");
+      if (saved) { root.setAttribute("data-theme", saved); }
+    } catch (e) {}
+    btn.addEventListener("click", function () {
+      var current = root.getAttribute("data-theme");
+      if (!current) {
+        current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      var next = current === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    });
+  })();
+</script>
+</body>
+</html>
